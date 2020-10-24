@@ -47,5 +47,13 @@ namespace GerenciadorEscolar.Api.Repository
                 .Where(x => x.EscolaId == escolaId)
                 .ToListAsync();
         }
+
+        public async Task<Turma> PesquisarPorEscolaAnoCursoSerieNomeTurma(Guid escolaId, int ano, string curso, string serie, string nome)
+        {
+            return await DbContext
+                .Turma
+                .Where(x => x.EscolaId == escolaId && x.Ano == ano && x.Curso == curso && x.Serie == serie && x.Nome == nome)
+                .FirstOrDefaultAsync();
+        }
     }
 }

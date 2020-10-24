@@ -194,7 +194,7 @@ namespace GerenciadorEscolar.Test.Service
 
             //Act
             repository
-                .Setup(x => x.PesquisarPorNome(escolaDto.Nome))
+                .Setup(x => x.PesquisarPorId(escolaDto.Id))
                 .Returns(Task.FromResult<Escola>(null));
 
             //Assert

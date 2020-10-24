@@ -12,5 +12,6 @@ namespace GerenciadorEscolar.Api.Repository
         Task Excluir(Turma turma);
         Task<Turma> PesquisarPorId(Guid id);
         Task<List<Turma>> ListarTodosPorEscola(Guid escolaId);
+        Task<Turma> PesquisarPorEscolaAnoCursoSerieNomeTurma(Guid escolaId, int ano, string curso, string serie, string nome);
     }
 }

@@ -156,5 +156,22 @@ namespace GerenciadorEscolar.Test.Repository
             //Assert
             Assert.DoesNotContain(turmasBd, x => x.Id.Equals(_primeira.Id));
         }
+
+        [Fact]
+        public async Task PesquisarPorEscolaAnoCursoSerieNomeTurmaDeveRetornarTurmaCorreta()
+        {
+
+            //Act
+            var itemAtual = await repository.PesquisarPorEscolaAnoCursoSerieNomeTurma(_primeira.EscolaId, _primeira.Ano, _primeira.Curso, _primeira.Serie, _primeira.Nome);
+
+            //Assert
+            Assert.Equal(_primeira.Id, itemAtual.Id);
+            Assert.Equal(_primeira.EscolaId, itemAtual.EscolaId);
+            Assert.Equal(_primeira.Ano, itemAtual.Ano);
+            Assert.Equal(_primeira.Curso, itemAtual.Curso);
+            Assert.Equal(_primeira.Serie, itemAtual.Serie);
+            Assert.Equal(_primeira.Nome, itemAtual.Nome);
+        }
+
     }
 }
