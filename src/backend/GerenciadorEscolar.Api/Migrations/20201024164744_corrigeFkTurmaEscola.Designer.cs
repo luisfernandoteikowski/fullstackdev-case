@@ -3,15 +3,17 @@ using System;
 using GerenciadorEscolar.Entity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace GerenciadorEscolar.Api.Migrations
 {
     [DbContext(typeof(GerenciadorEscolarDbContext))]
-    partial class GerenciadorEscolarDbContextModelSnapshot : ModelSnapshot
+    [Migration("20201024164744_corrigeFkTurmaEscola")]
+    partial class corrigeFkTurmaEscola
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -46,7 +48,6 @@ namespace GerenciadorEscolar.Api.Migrations
                         .HasColumnType("integer");
 
                     b.Property<string>("Curso")
-                        .IsRequired()
                         .HasMaxLength(255)
                         .HasColumnType("character varying(255)");
 
@@ -54,12 +55,10 @@ namespace GerenciadorEscolar.Api.Migrations
                         .HasColumnType("uuid");
 
                     b.Property<string>("Nome")
-                        .IsRequired()
                         .HasMaxLength(255)
                         .HasColumnType("character varying(255)");
 
                     b.Property<string>("Serie")
-                        .IsRequired()
                         .HasMaxLength(255)
                         .HasColumnType("character varying(255)");
 

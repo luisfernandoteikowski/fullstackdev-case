@@ -27,12 +27,12 @@ namespace GerenciadorEscolar.Entity
             {
                 entity.Property(e => e.Id).ValueGeneratedNever();
                 entity.Property(e => e.Ano).IsRequired();
-                entity.Property(e => e.Curso).HasMaxLength(255);
-                entity.Property(e => e.Serie).HasMaxLength(255);
-                entity.Property(e => e.Nome).HasMaxLength(255);
+                entity.Property(e => e.Curso).IsRequired().HasMaxLength(255);
+                entity.Property(e => e.Serie).IsRequired().HasMaxLength(255);
+                entity.Property(e => e.Nome).IsRequired().HasMaxLength(255);
                 entity.HasOne(d => d.Escola)
                   .WithMany(p => p.Turmas)
-                  .HasForeignKey(d => d.Id);
+                  .HasForeignKey(d => d.EscolaId);
             });
         }
     }
