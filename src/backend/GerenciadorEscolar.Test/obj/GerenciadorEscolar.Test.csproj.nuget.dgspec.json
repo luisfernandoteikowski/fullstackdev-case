@@ -125,6 +125,10 @@
               "target": "Package",
               "version": "[16.9.0-preview-20201020-06, )"
             },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.14.7, )"
+            },
             "xunit": {
               "target": "Package",
               "version": "[2.4.1, )"
