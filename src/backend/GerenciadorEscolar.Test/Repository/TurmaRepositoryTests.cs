@@ -13,8 +13,6 @@ namespace GerenciadorEscolar.Test.Repository
         private readonly Turma _primeira;
         private readonly Turma _segunda;
         private readonly Turma[] _turmas;
-
-
         private ITurmaRepository repository;
 
         public TurmaRepositoryTests()

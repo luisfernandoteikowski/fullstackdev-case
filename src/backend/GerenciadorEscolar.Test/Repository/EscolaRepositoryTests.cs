@@ -9,25 +9,25 @@ namespace GerenciadorEscolar.Test.Repository
 {
     public class EscolaRepositoryTests : TestComSqlite
     {
-        private readonly Escola _primeira = new Escola() { Id = Guid.NewGuid(), Nome = "EMEF Santa Barbara", NumeroInep = 4789 };
-        private readonly Escola _segunda = new Escola() { Id = Guid.NewGuid(), Nome = "EMEF João Pedro", NumeroInep = 3199 };
+        private readonly Escola _primeira;
+        private readonly Escola _segunda;
         private readonly Escola[] _escolas;
-
+        private IEscolaRepository repository;
         public EscolaRepositoryTests()
         {
+            _primeira = new Escola() { Id = Guid.NewGuid(), Nome = "EMEF Santa Barbara", NumeroInep = 4789 };
+            _segunda = new Escola() { Id = Guid.NewGuid(), Nome = "EMEF João Pedro", NumeroInep = 3199 };
 
             _escolas = new[] { _primeira, _segunda };
             Context.Escola.AddRange(_escolas);
             Context.SaveChanges();
+
+            repository = new EscolaRepository(Context);
         }
 
         [Fact]
         public async Task PesquisarPorIdDeveRetornarEscolaCorreta()
         {
-
-            //Arrange            
-            var repository = new EscolaRepository(Context);
-
             //Act
             var itemAtual = await repository.PesquisarPorId(_primeira.Id);
 
@@ -38,10 +38,6 @@ namespace GerenciadorEscolar.Test.Repository
         [Fact]
         public async Task PesquisarPorNomeDeveRetornarEscolaCorreta()
         {
-
-            //Arrange            
-            var repository = new EscolaRepository(Context);
-
             //Act
             var itemAtual = await repository.PesquisarPorNome(_segunda.Nome);
 
@@ -54,9 +50,6 @@ namespace GerenciadorEscolar.Test.Repository
         [Fact]
         public async Task ListarTodosDeveRetornarTodasEscolas()
         {
-            //Arrange
-            var repository = new EscolaRepository(Context);
-
             //Act
             var escolasBd = await repository.ListarTodos();
 
@@ -71,7 +64,6 @@ namespace GerenciadorEscolar.Test.Repository
         public async Task DeveInserirUmaEscola()
         {
             //Arrange
-            var repository = new EscolaRepository(Context);
             var terceira = new Escola()
             {
                 Nome = "EMEF Paulo Anchieta",
@@ -94,7 +86,6 @@ namespace GerenciadorEscolar.Test.Repository
         public async Task InserirEscolaComNomeNuloDeveLancarException()
         {
             //Arrange
-            var repository = new EscolaRepository(Context);
             var terceira = new Escola();
 
             //Assert
@@ -108,7 +99,6 @@ namespace GerenciadorEscolar.Test.Repository
         public async Task DeveAtualizarUmaEscola(string nomeAtual)
         {
             //Arrange
-            var repository = new EscolaRepository(Context);
             var escolaParaAtualizar = await repository.PesquisarPorId(_primeira.Id);
             escolaParaAtualizar.Nome = nomeAtual;
 
@@ -124,7 +114,6 @@ namespace GerenciadorEscolar.Test.Repository
         public async Task AtualizarEscolaComNomeNuloDeveLancarException()
         {
             //Arrange
-            var repository = new EscolaRepository(Context);
             var escolaParaAtualizar = await repository.PesquisarPorId(_primeira.Id);
             escolaParaAtualizar.Nome = null;
 
@@ -136,9 +125,6 @@ namespace GerenciadorEscolar.Test.Repository
         [Fact]
         public async Task DeveExcluirUmaEscola()
         {
-            //Arrange
-            var repository = new EscolaRepository(Context);
-
             //Act
             await repository.Excluir(_primeira);
             var escolasBd = await repository.ListarTodos();
