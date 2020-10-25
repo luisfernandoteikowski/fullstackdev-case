@@ -12,7 +12,9 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using GerenciadorEscolar.Entity;
 using Microsoft.EntityFrameworkCore;
-
+using GerenciadorEscolar.Api.Repository;
+using GerenciadorEscolar.Api.Service;
+using GerenciadorEscolar.Api.Filters;
 namespace GerenciadorEscolar.Api
 {
     public class Startup
@@ -27,9 +29,18 @@ namespace GerenciadorEscolar.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddMvc((options) =>
+            {
+                options.Filters.Add(typeof(HttpResponseExceptionFilter));
+            });
+
             services.AddDbContext<GerenciadorEscolarDbContext>(options =>
                 options.UseNpgsql(Configuration.GetConnectionString("App")));
+
+            services.AddTransient<IEscolaRepository, EscolaRepository>();
+            services.AddTransient<ITurmaRepository, TurmaRepository>();
+            services.AddTransient<IEscolaService, EscolaService>();
+            services.AddTransient<ITurmaService, TurmaService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,8 +54,6 @@ namespace GerenciadorEscolar.Api
             app.UseHttpsRedirection();
 
             app.UseRouting();
-
-            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
