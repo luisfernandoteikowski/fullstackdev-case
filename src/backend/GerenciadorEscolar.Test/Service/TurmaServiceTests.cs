@@ -257,7 +257,7 @@ namespace GerenciadorEscolar.Test.Service
             var repository = new Mock<ITurmaRepository>();
             repository
                 .Setup(x => x.PesquisarPorId(idEsperado))
-                .Returns(Task.FromResult(new Turma()));
+                .Returns(Task.FromResult(new Turma() { Escola = new Escola() }));
 
             //Act
             var service = new TurmaService(repository.Object);

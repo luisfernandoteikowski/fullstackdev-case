@@ -41,6 +41,14 @@ namespace GerenciadorEscolar.Api
             services.AddTransient<ITurmaRepository, TurmaRepository>();
             services.AddTransient<IEscolaService, EscolaService>();
             services.AddTransient<ITurmaService, TurmaService>();
+
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(builder => builder
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader());
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -54,6 +62,8 @@ namespace GerenciadorEscolar.Api
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors();
 
             app.UseEndpoints(endpoints =>
             {

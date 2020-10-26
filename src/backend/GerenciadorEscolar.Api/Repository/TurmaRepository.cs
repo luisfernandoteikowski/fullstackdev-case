@@ -37,13 +37,18 @@ namespace GerenciadorEscolar.Api.Repository
 
         public async Task<Turma> PesquisarPorId(Guid id)
         {
-            return await DbContext.Turma.FindAsync(id);
+            return await DbContext
+                .Turma
+                .Include(x => x.Escola)
+                .Where(x => x.Id == id)
+                .FirstOrDefaultAsync();
         }
 
         public async Task<List<Turma>> ListarTodosPorEscola(Guid escolaId)
         {
             return await DbContext
                 .Turma
+                .Include(x => x.Escola)
                 .Where(x => x.EscolaId == escolaId)
                 .ToListAsync();
         }
@@ -52,6 +57,7 @@ namespace GerenciadorEscolar.Api.Repository
         {
             return await DbContext
                 .Turma
+                .Include(x => x.Escola)
                 .Where(x => x.EscolaId == escolaId && x.Ano == ano && x.Curso == curso && x.Serie == serie && x.Nome == nome)
                 .FirstOrDefaultAsync();
         }

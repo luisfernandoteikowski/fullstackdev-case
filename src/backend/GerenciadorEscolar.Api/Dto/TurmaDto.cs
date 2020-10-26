@@ -8,6 +8,7 @@ namespace GerenciadorEscolar.Dto
     {
         public Guid Id { get; set; }
         public Guid EscolaId { get; set; }
+        public string EscolaNome { get; set; }
         public int Ano { get; set; }
         [Required]
         [MaxLength(255)]
@@ -29,6 +30,7 @@ namespace GerenciadorEscolar.Dto
             {
                 Id = turma.Id,
                 EscolaId = turma.EscolaId,
+                EscolaNome = turma.Escola.Nome,
                 Ano = turma.Ano,
                 Curso = turma.Curso,
                 Serie = turma.Serie,
