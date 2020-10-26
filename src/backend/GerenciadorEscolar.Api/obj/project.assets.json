@@ -825,11 +825,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\fazer_bkp\\luisfernando_cienciacomp\\luis fernando\\projetos\\impulso-network\\fullstackcase\\src\\backend\\GerenciadorEscolar.Api\\GerenciadorEscolar.Api.csproj",
+      "projectUniqueName": "c:\\fazer_bkp\\luisfernando_cienciacomp\\luis fernando\\projetos\\impulso-network\\fullstackcase\\src\\backend\\GerenciadorEscolar.Api\\GerenciadorEscolar.Api.csproj",
       "projectName": "GerenciadorEscolar.Api",
-      "projectPath": "C:\\fazer_bkp\\luisfernando_cienciacomp\\luis fernando\\projetos\\impulso-network\\fullstackcase\\src\\backend\\GerenciadorEscolar.Api\\GerenciadorEscolar.Api.csproj",
+      "projectPath": "c:\\fazer_bkp\\luisfernando_cienciacomp\\luis fernando\\projetos\\impulso-network\\fullstackcase\\src\\backend\\GerenciadorEscolar.Api\\GerenciadorEscolar.Api.csproj",
       "packagesPath": "C:\\Users\\luis fernando\\.nuget\\packages\\",
-      "outputPath": "C:\\fazer_bkp\\luisfernando_cienciacomp\\luis fernando\\projetos\\impulso-network\\fullstackcase\\src\\backend\\GerenciadorEscolar.Api\\obj\\",
+      "outputPath": "c:\\fazer_bkp\\luisfernando_cienciacomp\\luis fernando\\projetos\\impulso-network\\fullstackcase\\src\\backend\\GerenciadorEscolar.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\luis fernando\\AppData\\Roaming\\NuGet\\NuGet.Config",

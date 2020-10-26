@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\fazer_bkp\\luisfernando_cienciacomp\\luis fernando\\projetos\\impulso-network\\fullstackcase\\src\\backend\\GerenciadorEscolar.Test\\GerenciadorEscolar.Test.csproj": {}
+    "c:\\fazer_bkp\\luisfernando_cienciacomp\\luis fernando\\projetos\\impulso-network\\fullstackcase\\src\\backend\\GerenciadorEscolar.Test\\GerenciadorEscolar.Test.csproj": {}
   },
   "projects": {
-    "C:\\fazer_bkp\\luisfernando_cienciacomp\\luis fernando\\projetos\\impulso-network\\fullstackcase\\src\\backend\\GerenciadorEscolar.Api\\GerenciadorEscolar.Api.csproj": {
+    "c:\\fazer_bkp\\luisfernando_cienciacomp\\luis fernando\\projetos\\impulso-network\\fullstackcase\\src\\backend\\GerenciadorEscolar.Api\\GerenciadorEscolar.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\fazer_bkp\\luisfernando_cienciacomp\\luis fernando\\projetos\\impulso-network\\fullstackcase\\src\\backend\\GerenciadorEscolar.Api\\GerenciadorEscolar.Api.csproj",
+        "projectUniqueName": "c:\\fazer_bkp\\luisfernando_cienciacomp\\luis fernando\\projetos\\impulso-network\\fullstackcase\\src\\backend\\GerenciadorEscolar.Api\\GerenciadorEscolar.Api.csproj",
         "projectName": "GerenciadorEscolar.Api",
-        "projectPath": "C:\\fazer_bkp\\luisfernando_cienciacomp\\luis fernando\\projetos\\impulso-network\\fullstackcase\\src\\backend\\GerenciadorEscolar.Api\\GerenciadorEscolar.Api.csproj",
+        "projectPath": "c:\\fazer_bkp\\luisfernando_cienciacomp\\luis fernando\\projetos\\impulso-network\\fullstackcase\\src\\backend\\GerenciadorEscolar.Api\\GerenciadorEscolar.Api.csproj",
         "packagesPath": "C:\\Users\\luis fernando\\.nuget\\packages\\",
-        "outputPath": "C:\\fazer_bkp\\luisfernando_cienciacomp\\luis fernando\\projetos\\impulso-network\\fullstackcase\\src\\backend\\GerenciadorEscolar.Api\\obj\\",
+        "outputPath": "c:\\fazer_bkp\\luisfernando_cienciacomp\\luis fernando\\projetos\\impulso-network\\fullstackcase\\src\\backend\\GerenciadorEscolar.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\luis fernando\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -75,14 +75,14 @@
         }
       }
     },
-    "C:\\fazer_bkp\\luisfernando_cienciacomp\\luis fernando\\projetos\\impulso-network\\fullstackcase\\src\\backend\\GerenciadorEscolar.Test\\GerenciadorEscolar.Test.csproj": {
+    "c:\\fazer_bkp\\luisfernando_cienciacomp\\luis fernando\\projetos\\impulso-network\\fullstackcase\\src\\backend\\GerenciadorEscolar.Test\\GerenciadorEscolar.Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\fazer_bkp\\luisfernando_cienciacomp\\luis fernando\\projetos\\impulso-network\\fullstackcase\\src\\backend\\GerenciadorEscolar.Test\\GerenciadorEscolar.Test.csproj",
+        "projectUniqueName": "c:\\fazer_bkp\\luisfernando_cienciacomp\\luis fernando\\projetos\\impulso-network\\fullstackcase\\src\\backend\\GerenciadorEscolar.Test\\GerenciadorEscolar.Test.csproj",
         "projectName": "GerenciadorEscolar.Test",
-        "projectPath": "C:\\fazer_bkp\\luisfernando_cienciacomp\\luis fernando\\projetos\\impulso-network\\fullstackcase\\src\\backend\\GerenciadorEscolar.Test\\GerenciadorEscolar.Test.csproj",
+        "projectPath": "c:\\fazer_bkp\\luisfernando_cienciacomp\\luis fernando\\projetos\\impulso-network\\fullstackcase\\src\\backend\\GerenciadorEscolar.Test\\GerenciadorEscolar.Test.csproj",
         "packagesPath": "C:\\Users\\luis fernando\\.nuget\\packages\\",
-        "outputPath": "C:\\fazer_bkp\\luisfernando_cienciacomp\\luis fernando\\projetos\\impulso-network\\fullstackcase\\src\\backend\\GerenciadorEscolar.Test\\obj\\",
+        "outputPath": "c:\\fazer_bkp\\luisfernando_cienciacomp\\luis fernando\\projetos\\impulso-network\\fullstackcase\\src\\backend\\GerenciadorEscolar.Test\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\luis fernando\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -98,8 +98,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\fazer_bkp\\luisfernando_cienciacomp\\luis fernando\\projetos\\impulso-network\\fullstackcase\\src\\backend\\GerenciadorEscolar.Api\\GerenciadorEscolar.Api.csproj": {
-                "projectPath": "C:\\fazer_bkp\\luisfernando_cienciacomp\\luis fernando\\projetos\\impulso-network\\fullstackcase\\src\\backend\\GerenciadorEscolar.Api\\GerenciadorEscolar.Api.csproj"
+              "c:\\fazer_bkp\\luisfernando_cienciacomp\\luis fernando\\projetos\\impulso-network\\fullstackcase\\src\\backend\\GerenciadorEscolar.Api\\GerenciadorEscolar.Api.csproj": {
+                "projectPath": "c:\\fazer_bkp\\luisfernando_cienciacomp\\luis fernando\\projetos\\impulso-network\\fullstackcase\\src\\backend\\GerenciadorEscolar.Api\\GerenciadorEscolar.Api.csproj"
               }
             }
           }
