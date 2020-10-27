@@ -39,7 +39,7 @@ namespace GerenciadorEscolar.Api.Filters
                     context.Result = new ObjectResult(new OperacaoCrudDto()
                     {
                         Success = false,
-                        Error = Environment.IsDevelopment() ? context.Exception.Message : "Ocorreu um erro"
+                        Error = Environment.IsDevelopment() ? context.Exception.Message : context.Exception.Message
                     })
                     {
                         StatusCode = 500
