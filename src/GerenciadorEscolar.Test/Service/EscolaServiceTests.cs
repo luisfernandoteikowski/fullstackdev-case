@@ -44,7 +44,6 @@ namespace GerenciadorEscolar.Test.Service
                 NumeroInep = 4789
             };
 
-            //Act
             repository
                 .Setup(x => x.PesquisarPorNome(escolaDto.Nome))
                 .Returns(Task.FromResult(new Escola()
@@ -101,7 +100,6 @@ namespace GerenciadorEscolar.Test.Service
                 NumeroInep = 4789
             };
 
-            //Act
             repository
                 .Setup(x => x.PesquisarPorNome(escolaDto.Nome))
                 .Returns(Task.FromResult(new Escola()
@@ -162,7 +160,6 @@ namespace GerenciadorEscolar.Test.Service
                 NumeroInep = 4789
             };
 
-            //Act
             repository
                 .Setup(x => x.PesquisarPorId(escolaDto.Id))
                 .Returns(Task.FromResult(new Escola()
@@ -172,7 +169,7 @@ namespace GerenciadorEscolar.Test.Service
                     NumeroInep = escolaDto.NumeroInep
                 }));
 
-            //Assert
+            //Act
             var service = new EscolaService(repository.Object);
             await service.Excluir(escolaDto.Id);
 
@@ -192,7 +189,6 @@ namespace GerenciadorEscolar.Test.Service
                 NumeroInep = 4789
             };
 
-            //Act
             repository
                 .Setup(x => x.PesquisarPorId(escolaDto.Id))
                 .Returns(Task.FromResult<Escola>(null));

@@ -115,7 +115,7 @@ namespace GerenciadorEscolar.Test.Controllers
         }
 
         [Fact]
-        public async Task PutDeveExcluirEscola()
+        public async Task DeleteDeveExcluirEscola()
         {
             //Arrange
             var service = new Mock<IEscolaService>();

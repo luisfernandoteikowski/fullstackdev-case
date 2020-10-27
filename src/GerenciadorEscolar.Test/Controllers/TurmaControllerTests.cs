@@ -122,7 +122,7 @@ namespace GerenciadorEscolar.Test.Controllers
         }
 
         [Fact]
-        public async Task PutDeveExcluirTurma()
+        public async Task DeleteDeveExcluirTurma()
         {
             //Arrange
             var service = new Mock<ITurmaService>();
